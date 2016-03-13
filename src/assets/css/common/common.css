@@ -1,0 +1,637 @@
+@media screen and (max-width: 374px) {
+    * {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 413px) {
+    * {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 479px) {
+    * {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+    * {
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    * {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
+/**
+* 清除浮动
+*/
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.clearfix:after {
+    clear: both
+}
+.hid{
+    display: none;
+}
+.show{
+    display: block;
+}
+/*解决1px边框问题:begin*/
+.thin-border {
+    position: relative;
+}
+
+.thin-border:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.thin-border-top:after{
+    border-top: 1px solid #DFDFDF;
+}
+.thin-border-right:after{
+    border-right: 1px solid #DFDFDF;
+}
+.thin-border-bottom:after{
+    border-bottom: 1px solid #DFDFDF;
+}
+.thin-border-left:after{
+    border-left: 1px solid #DFDFDF;
+}
+.thin-border-all:after{
+    border: 1px solid #DFDFDF;
+}
+
+.after-scale {
+    position: relative;
+}
+.after-scale.sp:after{
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+.after-scale:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #dfdfdf;
+    -webkit-transform: scaleY(-0.5);
+    -webkit-transform-origin: 0 0;
+}
+.-scale:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #dfdfdf;
+    -webkit-transform: scaleY(-0.5);
+    -webkit-transform-origin: 0 0;
+}
+/*解决1px边框问题:end*/
+
+/*CSS3动画:begin*/
+
+.fadeIn {
+    -webkit-animation: fadeIn ease 1s;
+    animation: fadeIn ease 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*CSS3动画：end*/
+
+/*样式统一*/
+html{
+    font-family: Verdana, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;  /*禁止长按复制*/
+    user-select: none;
+    -webkit-text-size-adjust: 100%!important;/*禁止用户缩放字体*/
+    text-size-adjust: 100%!important;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0
+}
+
+img {
+    border: 0
+}
+
+input, img {
+    vertical-align: middle;
+}
+
+/*去除IOS下上边框阴影*/
+input,textarea,a{
+    -webkit-appearance: none;
+}
+*{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+a{
+    text-decoration: none;
+}
+
+button,
+input,
+button:focus,
+input:focus
+{
+    outline: none;
+}
+
+/*通用class*/
+.common-pbox{
+   padding-left: 1rem; 
+   padding-right: 1rem; 
+}
+.common-mbox{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.box-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+/*input*/
+
+
+.common-input-lg{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.75rem;
+    padding: 0.875rem 0 0.875rem 0.625rem;
+    border: 1px solid #DFDFDF;
+    -webkit-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: #3F3F3F;
+    outline: none; 
+}
+
+.common-input-lg:focus{
+    outline: none;
+}
+.common-input-lg::-webkit-input-placeholder{
+    font-size: 1rem;
+    color: #C5C5C5;
+}
+.common-input-lg::placeholder{
+    font-size: 1rem;
+    color: #C5C5C5;
+}
+.common-input-lg.sp{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.875rem;
+}
+.common-input-lg.sp::-webkit-input-placeholder{
+    font-size: 0.875rem;
+}
+.common-input-lg.sp::input-placeholder{
+    font-size: 0.875rem;
+}
+.common-input-lg.login-input{
+    border: none;
+    background-color: transparent;
+    color: #FFF;
+    /*border-bottom: 1px solid rgba(255,255,255,0.5);*/
+    border-radius: 0;
+}
+
+.common-input-lg.login-input::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.5);
+}
+.common-input-lg.login-input::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+/*btn*/
+.common-btn-lg,
+.common-btn-md,
+.common-btn-sm{
+   color: #FFF;
+   text-align: center;
+   border: none;
+   -webkit-border-radius: 0.25rem;
+   border-radius: 0.25rem;
+   outline: none;
+   background-color: #1D4B6F; 
+}
+
+.common-btn-lg{ 
+   width: 100%;
+   height: 2.75rem; 
+   font-size: 1.063rem;
+}
+.common-btn-lg.blue,
+.common-btn-md.blue
+{
+	background-color: #3B98E0;
+}
+.common-btn-lg.blue.gray,
+.common-btn-md.blue.gray
+{
+	background-color: #DFDFDF;
+}
+.common-btn-lg.border{
+    background-color: transparent;
+    border: 1px solid #3B98E0;
+    color: #3B98E0;
+}
+.common-btn-sm{
+	width: 4rem;
+	height: 1.375rem;
+	line-height: 1.375rem;
+	font-size: 0.625rem;
+	background-color: #3B98E0;
+}
+.common-btn-md{
+    width: 3.063rem;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    font-size: 0.625rem;
+    background-color: #3B98E0;
+}
+.common-btn-lg.gray{
+    background-color: rgba(106,150,185,0.8);
+}
+.common-btn-lg:focus{
+    outline: none;
+}
+.common-borderDiv{
+    position: relative;
+    height: 0.625rem;
+}
+.common-borderDiv:first-child:after{
+    border: none;
+}
+.common-borderDiv:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+    background-color: #EFEFEF;
+}
+/*通用属性设置*/
+.fn-mb16{
+    margin-bottom: 0.5rem;
+}
+.fn-mb20{
+    margin-bottom: 0.625rem;
+}
+.fn-ml32{
+    margin-left: 1rem;
+}
+.fn-mt40{
+	margin-top: 1.25rem;	
+}
+.fn-mb60{
+    margin-bottom: 1.875rem;
+}
+
+/*字体相关*/
+.ft-center{
+    text-align: center;
+}
+.ft-black-3F{
+	color: #3F3F3F;
+}
+.ft-black-25{
+    color: #252525;
+}
+.ft-gray-6{
+    color: #666;
+}
+.ft-gray-9{
+	color: #999;
+}
+.ft-orange{
+	color: #FF6230;
+}
+.ft-24{
+	font-size: 0.75rem;
+}
+.ft-28{
+	font-size: 0.875rem;
+}
+.ft-30{
+	font-size: 0.937rem;
+}
+.ft-32{
+	font-size: 1rem;
+}
+.ft-36{
+    font-size: 1.125rem;
+}
+.ft-blue{
+    color: #3B98E0;
+}
+.ft-hidden{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.fn-Hidden{
+    overflow: hidden;
+}
+.fn-Hidden-x{
+    overflow-x:hidden; 
+}
+.ft-left{
+    text-align: left;
+}
+.ft-center{
+    text-align: center;
+}
+.ft-right{
+    text-align: right;
+}
+
+/*高度*/
+.height1{
+    height: 1px;
+}
+.height20{
+    height: 0.65rem;
+}
+
+/*颜色相关*/
+.body-bg{
+    background-color: #efefef;
+}
+
+/*组件CSS*/
+.warn-msg{
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    line-height: 2rem;
+    font-size: 0.813rem;
+    color: #ff871c;
+    text-indent: 0.938rem;
+    background-color: #fff3b9;
+}
+/*定位*/
+.fn-fl{
+    float: left;
+}
+.fn-fr{
+    float: right;
+}
+.fn-abs{
+    position: absolute;
+}
+.fn-re{
+    position: relative;
+}
+.fn-bg-white{
+    background-color: #fff;
+}
+/*公用组件*/
+.toast{
+    position: fixed;
+    z-index: 9999;
+    bottom: 3rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: toast 4s ease;
+    animation: toast 4s ease;
+}
+.toast > .text{
+    display: inline-block;
+    line-height: 1.4;
+    max-width: 60%;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, .4);
+    color: #FFF;
+    font-size: 1rem;
+}
+
+/*提示信息*/
+.common-tip-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+    z-index: 10;
+}
+.common-tip-box > .icon{
+    display: inline-block;
+    margin-top: 7.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    /*-webkit-background-size: 100% auto;*/
+    /*background: transparent url(../../img/empty@2x.png) no-repeat 0 0/100% auto;*/
+}
+.common-tip-box > .text{
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: #999;
+}
+.common-tip-box > .btn{
+    width: 6.25rem;
+    height: 1.875rem;
+    font-size: 0.875rem;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #DFDFDF;
+    -webkit-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.common-tip-box > .btn:focus{
+    outline: none;
+}
+
+@-webkit-keyframes toast {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes toast {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*
+* 开启硬件加速,可以提高动画的流畅度，但增加了内存的使用，而且它会减少移动端设备的电池寿命
+* 仅在有动画的界面使用
+*/
+.gpu{
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*-webkit-perspective: 1000;*/
+    /*perspective: 1000;*/
+}
+
+/*删除图标*/
+.icon-close{
+    position: absolute;
+    width: 3rem;
+    height: 2.75rem;
+    right: 0;
+    top: 0;
+}
+.icon-close > i{
+    display: inline-block;
+    width: 1rem;
+    height: 1px;
+    margin-top: 1.5rem;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.icon-close > i:after{
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(90deg);
+    transform-origin: center center;
+    transform: rotate(90deg);
+}
+
+.clear-icon-transition,
+.clear-icon-transition i{
+    -webkit-transition: all .5s ease;
+    transition: all .8s ease;
+}
+.clear-icon-enter,.clear-icon-leave{
+    opacity: 0;
+}
+.clear-icon-enter i,.clear-icon-leave i{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+/*loading代码*/
+.g-loading{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+.g-loading-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    height: 5.625rem;
+    width: 5rem;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 0.3rem;
+    text-align: center;
+}
+.g-loading-box > .icon{
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 1.25rem 0 0.5rem 0;
+    /*background: transparent url(../../css/img/loading_128.gif) no-repeat center center;*/
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+.g-loading-box > p{
+    color: #FFF;
+    font-size: 0.875rem;
+}
+
+
+
